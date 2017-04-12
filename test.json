@@ -1,0 +1,19 @@
+{
+  "schools": [
+    {
+      "name": "Odessa National Economics University",
+      "location": "Odessa, Ukraine",
+      "degree date": "2003",
+      "major": ["Bachelor Degree in Banking"],
+      "url": "http://oneu.edu.ua/index(en).php"
+    }
+  ],
+  "onlineCourses": [
+    {
+      "title": "Front-End Web Developer",
+      "school": "UDACITY",
+      "dates": "2017",
+      "url": "https://www.udacity.com/"
+    }
+  ]
+}
