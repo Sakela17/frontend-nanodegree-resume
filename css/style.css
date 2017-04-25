@@ -1,3 +1,4 @@
+
 body,
 div,
 ul,
@@ -169,6 +170,13 @@ img {
 
 span {
   padding: 5px;
+}
+
+.header-role {
+  font-size: 20px;
+  color: #f3f3f3;
+  padding-left: 10px;
+
 }
 
 #lets-connect {
