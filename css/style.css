@@ -1,4 +1,6 @@
-
+/** {*/
+  /*border: red solid 1px;*/
+/*}*/
 body,
 div,
 ul,
@@ -20,13 +22,13 @@ h6 {
 }
 
 .education-entry,
-.work-entry,
-.project-entry {
+.work-entry {
+/*.project-entry {*/
   padding: 0 5%;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 2.4rem;
   color: #f5a623;
   line-height: 48px;
   display: inline;
@@ -136,10 +138,13 @@ a {
 .flex-box {
   display: -webkit-flex;
   display: flex;
+  /* short-hand for flex-direction and flex-wrap is flex-flow
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap;*/
+  flex-flow: row wrap;
   justify-content: space-around;
   padding: 10px;
+
 }
 
 .flex-column {
@@ -161,7 +166,7 @@ ul {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
+  /*display: none;*/
 }
 
 img {
@@ -173,7 +178,7 @@ span {
 }
 
 .header-role {
-  font-size: 20px;
+  font-size: 1.2rem;
   color: #f3f3f3;
   padding-left: 10px;
 
@@ -181,6 +186,53 @@ span {
 
 #lets-connect {
   text-align: center;
+}
+
+#projects {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0 5%;
+}
+
+#projects h2 {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.project-entry {
+  width: 100%;
+  /*float: left;*/
+  /*margin-left: -15px;*/
+  /*margin-right: -15px;*/
+  /*margin-right: 15px;*/
+  /*width: calc((100% - 15px)/3.05);*/
+  /*padding: 0 15px;*/
+}
+
+/*.project-entry:last-of-type {*/
+  /*margin-right: 0;*/
+/*}*/
+
+.project-entry img {
+  max-width: 100%;
+  padding: 0;
+}
+
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
 }
 
 /* Media queries to handle various device widths */
@@ -209,21 +261,42 @@ span {
   }
 }
 
-#map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
-}
-
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-}
-
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
     display: block;
   }
+}
+
+@media print and (color) {
+  * {
+    /** forces printing of background colors and images in browsers based on the WebKit engine **/
+    -webkit-print-color-adjust: exact;
+    /** this property maybe included in a future. This will be a cross-browser alternative to the one above.
+    color-adjust: exact;*/
+  }
+}
+
+@media print {
+ .welcome-message,
+ .biopic,
+ #skills,
+ #skills-h3 {
+   display: none;
+ }
+
+ .main-section {
+   page-break-inside: avoid;
+ }
+
+ #topContacts {
+   font-size: 13px;
+   padding: 0;
+ }
+  #map {
+    /*display: block;*/
+    /*height: 100%;*/
+    /*margin: 0 5%;*/
+  }
+
 }
