@@ -151,10 +151,6 @@ a {
   padding: 10px;
 }
 
-footer .flex-box {
-  justify-content: center;
-}
-
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -284,12 +280,14 @@ span {
     font-size: 0.8rem;
   }
 
-  #topContacts > li span:first-of-type {
+  #topContacts > li span:first-of-type,
+  #footerContacts > li span:first-of-type {
     display: none;
   }
 
   /*  add telephone icon as pseudo element  */
-  #topContacts li:first-of-type span:before {
+  #topContacts li:first-of-type span:before,
+  #footerContacts li:first-of-type span:before {
     content: "";
     width: 18px;
     height: 18px;
@@ -300,7 +298,8 @@ span {
   }
 
   /*  add envelope icon as pseudo element  */
-  #topContacts li:nth-of-type(2) span:before {
+  #topContacts li:nth-of-type(2) span:before,
+  #footerContacts li:nth-of-type(2) span:before {
     content: "";
     width: 18px;
     height: 18px;
@@ -311,7 +310,8 @@ span {
   }
 
   /*  add github icon as pseudo element  */
-  #topContacts li:nth-of-type(3) span:before {
+  #topContacts li:nth-of-type(3) span:before,
+  #footerContacts li:nth-of-type(3) span:before {
     content: "";
     width: 18px;
     height: 18px;
@@ -322,7 +322,8 @@ span {
   }
 
   /*  add github icon as pseudo element  */
-  #topContacts li:last-of-type span:before {
+  #topContacts li:last-of-type span:before,
+  #footerContacts li:last-of-type span:before {
     content: "";
     width: 18px;
     height: 18px;
@@ -365,8 +366,12 @@ span {
     right: 0;
   }
 
-  #topContacts {
+  #topContacts,
+  #footerContacts {
     font-size: 0.8rem;
+  }
+
+  #topContacts {
     padding: 0;
   }
 
@@ -374,6 +379,9 @@ span {
   #topContacts > li span:first-of-type,
   #topContacts li:nth-of-type(3),
   #topContacts li:last-of-type,
+  #footerContacts > li span:first-of-type,
+  #footerContacts li:nth-of-type(3),
+  #footerContacts li:last-of-type,
   .education-entry .location-text {
     display: none;
   }

@@ -26,6 +26,7 @@ var bio = {
         $("#header").prepend(formattedName,formattedRole).append(formattedPicture,formattedWelcomeMsg,HTMLskillsStart);
         $(".header-role").after(formattedPicture);
         $("#topContacts").append(formattedMobile, formattedEmail, formattedGitHub, formattedLoc);
+        $("#footerContacts").append(formattedMobile, formattedEmail, formattedGitHub, formattedLoc);
         this.skills.forEach(function (skill) {
             var formattedSkills = HTMLskills.replace("%data%", skill);
             $("#skills").append(formattedSkills);
@@ -112,8 +113,11 @@ var projects = {
             var formattedprjTitle = HTMLprojectTitle.replace("%data%",project.title);
             var formattedprjDates = HTMLprojectDates.replace("%data%",project.dates);
             var formattedprjDesc = HTMLprojectDescription.replace("%data%",project.description);
-            var formattedprjImg = HTMLprojectImage.replace("%data%",project.images);
-            $(".project-entry:last").append(formattedprjTitle,formattedprjDates,formattedprjDesc,formattedprjImg);
+            $(".project-entry:last").append(formattedprjTitle,formattedprjDates,formattedprjDesc);
+            project.images.forEach(function (image) {
+                var formattedprjImg = HTMLprojectImage.replace("%data%",image);
+                $(".project-entry:last").append(formattedprjImg);
+            });
         });
     }
 };
