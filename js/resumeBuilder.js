@@ -8,7 +8,7 @@ var bio = {
         "github": "Sakela17",
         "location": "Kennesaw, GA"
     },
-    "welcomeMsg": "&#8275;This year I decided to pursue a new career path in web development. " +
+    "welcomeMessage": "&#8275;This year I decided to pursue a new career path in web development. " +
     "It quickly became my passion that satisfies my creative and logical thinking skills. " +
     "I'm enthusiastic, sociable, broad-minded, and responsible individual who is eager to build a long-term career in " +
     "this new field.&#8275;",
