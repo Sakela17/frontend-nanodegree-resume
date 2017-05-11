@@ -22,7 +22,7 @@ var bio = {
         var formattedGitHub = HTMLgithub.replace("%data%", this.contacts.github);
         var formattedLoc = HTMLlocation.replace("%data%", this.contacts.location);
         var formattedPicture = HTMLbioPic.replace("%data%", this.biopic);
-        var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", this.welcomeMsg);
+        var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", this.welcomeMessage);
         $("#header").prepend(formattedName,formattedRole).append(formattedPicture,formattedWelcomeMsg,HTMLskillsStart);
         $(".header-role").after(formattedPicture);
         $("#topContacts").append(formattedMobile, formattedEmail, formattedGitHub, formattedLoc);
