@@ -25,8 +25,7 @@ var bio = {
         var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", this.welcomeMessage);
         $("#header").prepend(formattedName,formattedRole).append(formattedPicture,formattedWelcomeMsg,HTMLskillsStart);
         $(".header-role").after(formattedPicture);
-        $("#topContacts").append(formattedMobile, formattedEmail, formattedGitHub, formattedLoc);
-        $("#footerContacts").append(formattedMobile, formattedEmail, formattedGitHub, formattedLoc);
+        $("#topContacts, #footerContacts").append(formattedMobile, formattedEmail, formattedGitHub, formattedLoc);
         this.skills.forEach(function (skill) {
             var formattedSkills = HTMLskills.replace("%data%", skill);
             $("#skills").append(formattedSkills);
@@ -148,11 +147,11 @@ var education = {
         this.schools.forEach(function (school) {
             $("#education").append(HTMLschoolStart);
             var formattedSclName = HTMLschoolName.replace("%data%", school.name).replace("#", school.url);
-            // var formattedSclDegree = HTMLschoolDegree.replace("%data%", school.degree);
+            var formattedSclDegree = HTMLschoolDegree.replace("%data%", school.degree);
             var formattedSclDates = HTMLschoolDates.replace("%data%", school.dates);
             var formattedSclLoc = HTMLschoolLocation.replace("%data%", school.location);
             var formattedSclMjr = HTMLschoolMajor.replace("%data%", school.majors);
-            $(".education-entry:last").append(formattedSclName,formattedSclDates,formattedSclLoc,formattedSclMjr);
+            $(".education-entry:last").append(formattedSclName+formattedSclDegree,formattedSclDates,formattedSclLoc,formattedSclMjr);
         });
         // $("#education").append(HTMLonlineClasses); - don't want to include it
         this.onlineCourses.forEach(function (course) {
